@@ -34,7 +34,7 @@ export default function App() {
       <Navbar fluid collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <Link to="/">Scratch</Link>
+            <Link to="/home">Brand</Link>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -43,14 +43,22 @@ export default function App() {
             {isAuthenticated
               ? <NavItem onClick={handleLogout}>Logout</NavItem>
               : <>
-                <LinkContainer to="/signup">
-                  <NavItem>Signup</NavItem>
+              <LinkContainer to="/home">
+                  <NavItem>Home</NavItem>
                 </LinkContainer>
-                <LinkContainer to="/login">
-                  <NavItem>Login</NavItem>
+                <LinkContainer to="/services">
+                  <NavItem>Our Services</NavItem>
                 </LinkContainer>
+                <LinkContainer to="/contact">
+                  <NavItem>Contact</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/aboutus">
+                  <NavItem>About Us</NavItem>
+                </LinkContainer>
+               
               </>
-            }          </Nav>
+            }
+            </Nav>
         </Navbar.Collapse>
       </Navbar>
       <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>

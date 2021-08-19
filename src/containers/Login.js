@@ -2,10 +2,12 @@ import React, { useState,useEffect } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 import "./Login.css";
 import { useAppContext } from "../libs/contextLib";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory()
   const { userHasAuthenticated } = useAppContext();
 
 
@@ -42,7 +44,13 @@ export default function Login() {
             onChange={e => setPassword(e.target.value)}
           />
         </FormGroup>
-        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        <Button
+        onClick = {()=>{
+          console.log('history')
+          history.push('/NotFound')
+        }}
+         block bsSize="large" disabled={!validateForm()} 
+         type="submit">
           Login
         </Button>
       </form>
