@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>id attrib</title>
+    <style>
+        #header {font-size: 20px; font-weight: bold;margin-top: 50;}
+    </style>
+    <script>
+        function increaseFont(){
+            let x = document.getElementById('header')
+            console.log('x',x.style.fontSize)
+            x.style.fontSize = 35
+        }
+        function chagetext(){
+            let x = document.getElementById('chan')
+            x.innerHTML = '<p style="background-color:red;">this is changed value'
+            // x.innerText = "this is changed value"
+
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li onclick="increaseFont()" id="header">thiss is id test</li>
+        <li onclick="chagetext()" id="chan">thiss is id test</li>
+    </ul>
+
+</body>
+</html>
