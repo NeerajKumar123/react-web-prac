@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <script>
+        function showdate(){
+            const date = new Date()
+            const x =  document.getElementById('dt')
+            x.innerText = date
+            x.innerHTML = "<p>this is paragraph</p>"
+            const userImage = document.getElementById('user')
+            userImage.src = 'Bernie+WFH.png'
+            userImage.alt = "this changed alt"
+            console.log('userImage',userImage)
+        }
+    </script>
+    <noscript>sorry your browser doesn't support script</noscript>
+</head>
+<body>
+    <button onclick="showdate()">show date</button>
+    <p id="dt">I will display date , please click above</p>
+    <img width="300" height="200" id="user" src="hearing-in-crowd-1.jpeg" alt="this is">
+</body>
+</html>

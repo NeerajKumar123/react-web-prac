@@ -3,6 +3,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="https://www.w3schools.com/" target="_blank">
     <title>id attrib</title>
     <style>
         #header {font-size: 20px; font-weight: bold;margin-top: 50;}
@@ -12,12 +15,11 @@
             let x = document.getElementById('header')
             console.log('x',x.style.fontSize)
             x.style.fontSize = 35
+            x.style.fontWeight = 'bold'
         }
         function chagetext(){
             let x = document.getElementById('chan')
             x.innerHTML = '<p style="background-color:red;">this is changed value'
-            // x.innerText = "this is changed value"
-
         }
     </script>
 </head>
@@ -25,7 +27,10 @@
     <ul>
         <li onclick="increaseFont()" id="header">thiss is id test</li>
         <li onclick="chagetext()" id="chan">thiss is id test</li>
+        <a href="tags/tag_base.asp">HTML base Tag</a>
     </ul>
 
 </body>
 </html>
+
+<!-- https://www.w3schools.com/tags/tag_base.asp -->
