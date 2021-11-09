@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+        .left {
+           background-color: red;
+           width: 33%;
+           height: 300;
+           float: left;
+           padding: 5px;
+       } 
+       .main {
+           background-color:green;
+           width: 33%;
+           height: 300;
+           float: left;
+           margin-left: .5%;
+           margin-right: .5%;
+           padding: 5px;
+       } 
+       .right {
+           background-color:orange;
+           width: 33%;
+           height: 300;
+           float: left;
+           padding: 5px;
+       } 
+
+       @media screen and (max-width: 800px) {
+           .left {
+               background-color: palevioletred;
+               width: 100%;
+            }
+            .right {
+                background-color:slategray;
+               width: 100%;
+            }
+            .main {
+                background-color:blanchedalmond;
+               width: 100%;
+               margin-left: 0%;
+               margin-right: 0%;
+               margin-top: 5;
+               margin-bottom: 5;
+            }
+       }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <h4>this is left</h4>
+    </div>
+    <div class="main">
+        <h4>this is middle</h4>
+    </div>
+    <div class="right">
+        <h4>this is right</h4>
+    </div>
+</body>
+</html>

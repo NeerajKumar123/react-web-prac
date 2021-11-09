@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="mystyle.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+function changeContent () {
+    console.log(document.getElementById('user'))
+    document.getElementById('user').src = '../containers/photo-1583173451851-dd9ba01f891e.jpeg'
+    document.getElementById('user2').innerText = 'I have changed'
+}
+    </script>
+    <noscript>
+        Browser does not support js
+    </noscript>
+</head>
+<body>
+    <div class="mainbody"> 
+        <p style="background-color: red;" id="user2">
+            <b>
+                I am original Image
+            </b>
+        </p>
+        <img id="user" src="../containers/Bernie+WFH.png" alt="">
+        <button onclick="changeContent()">ChangeImage source</button>
+    </div>
+    
+</body>
+</html>

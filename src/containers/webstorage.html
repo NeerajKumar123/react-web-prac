@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function saveData (){
+            if(typeof(Storage) !== "undefined"){
+                localStorage.setItem('Name',"Neeraj")
+                sessionStorage.setItem('Pass','123')
+            }
+
+        }
+        function getData (){
+            if(typeof(Storage) !== "undefined"){
+               var name =  localStorage.getItem('Name')
+               var pass =  sessionStorage.getItem('Pass')
+               var nameTag = document.getElementById('name')
+               nameTag.innerHTML = name
+
+               var passtag = document.getElementById('pass')
+               passtag.innerHTML = pass
+            }
+
+        }
+    </script>
+</head>
+<body>
+    
+    <button onclick="saveData()">Save Data</button>
+    <button onclick="getData()">Get Data</button>
+    <p id="name">User Name : </p>
+    <p id="pass">Password:</p>
+
+</body>
+</html>

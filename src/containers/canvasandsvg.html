@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myCanvas {
+            background-color: chocolate;
+            width: auto;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function drawLine (){
+            var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d")
+ctx.moveTo(0, 0);
+ctx.lineTo(200, 100);
+ctx.stroke();
+
+        }
+
+        function drawGrad (){
+            var c = document.getElementById("myCanvas2");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createLinearGradient(0, 0, 200, 0);
+grd.addColorStop(0, "green");
+grd.addColorStop(1, "white");
+
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 200, 100);
+        }
+    </script>
+</head>
+<body>
+
+    <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+      </svg> 
+      <br>   
+      <svg width="400" height="100">
+        <rect width="400" height="100"  stroke="green" stroke-width="4" fill="orange" />
+      </svg> 
+      <br>   
+    <canvas class="myCanvas" id="myCanvas" width="200" height="100">
+        This is canvas
+    </canvas> <br>
+    <button onclick="drawLine()" >draw line</button>
+    <br>
+    <canvas class="myCanvas" id="myCanvas2" width="200" height="100">
+        <p>This is canvas 2</p>
+    </canvas> <br>
+    <button onclick="drawGrad()" >drawGrad</button>
+
+
+    
+
+</body>
+</html>

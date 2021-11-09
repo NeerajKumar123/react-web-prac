@@ -1,0 +1,36 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function getLocatoin() {
+        var loc = document.getElementById("loc");
+        console.log("getLocatoin", navigator.geolocation);
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition((pos) => {
+            console.log("pos", pos);
+            loc.innerHTML =
+              "Location is:" +
+              pos.coords.latitude +
+              "and" +
+              pos.coords.latitude;
+          },
+          (error)=>{
+            console.log('error====>',error)
+            loc.innerHTML = error?.message
+          });
+        } else {
+          console.log("sdsddd");
+          loc.innerHTML =
+            "Location fetching failed....";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <p id="loc">Your localtion will be shown here</p>
+    <button onclick="getLocatoin()">Get localtion</button>
+  </body>
+</html>
