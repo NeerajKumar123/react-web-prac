@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const id = 20
+        const myPromise = new Promise((resolve, reject) =>{
+            setTimeout(() => {
+                id > 10  ? resolve('Promise resolved') : reject('Promise failed')
+            }, 3000);
+        })
+        myPromise.then(
+            (value)=>{
+                document.getElementById('prms').innerHTML  = value
+            },
+            (value)=>{
+                document.getElementById('prms').innerHTML  = value  
+            })
+    </script>
+</head>
+<body>
+    <p id="prms"></p>
+</body>
+</html>

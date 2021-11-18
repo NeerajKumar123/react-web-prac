@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- https://www.w3schools.com/js/js_es6.asp -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+    <script>
+        function lettest () {
+            let a  = 10
+            {
+                let a = 20
+                console.log('a in',a)
+            }
+            console.log('a out',a)
+        }
+// // ES5
+// var x = function(x, y) {
+//    return x * y;
+// }
+
+// // ES6
+// const x = (x, y) => x * y;
+
+
+const forOfFunc = () =>{
+    const cars = ["BMW", "Volvo", "Mini"];
+let text = "";
+
+for (let x of cars) {
+    console.log('x===>',x)
+}
+}
+
+const mapTest = () =>{
+    // Create Objects
+const apples = {name: 'Apples'};
+const bananas = {name: 'Bananas'};
+const oranges = {name: 'Oranges'};
+
+// Create a Map
+const fruits = new Map();
+
+// Add new Elements to the Map
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);
+console.log('fruits',fruits)
+}
+
+const settest = () =>{
+
+// Create a Set
+const letters = new Set();
+
+// Add some values to the Set
+letters.add("a");
+letters.add("b");
+letters.add("c");
+
+console.log('letters',letters)
+}
+</script>
+<script src="Student.js"></script> <!-- Executed 1st -->
+<script>
+    var st
+    const createUser = () =>{
+    st = new Student("Neeraj", "B.Tech",30, 65);
+    }
+    const showCreatedUser = () =>{
+        st && alert(st.getStudentDesc())
+    }
+</script>
+</head>
+<body>
+    <h4>this is es 6 practice</h4>
+    <button onclick="lettest()">clickme</button>
+    <button onclick="mapTest()">settest</button>
+    <button onclick="forOfFunc()">forof</button>
+    <button onclick="settest()">settest</button>
+    <button onclick="classTest()">settest</button>
+    <button onclick="createUser()">createUser</button>
+    <button onclick="showCreatedUser()">getdesc</button>
+</body>
+</html>
+
+
+
